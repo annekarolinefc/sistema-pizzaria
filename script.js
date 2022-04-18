@@ -2,7 +2,7 @@
 //VARIÁVEIS
 let somaMussarela = 0;
 let somaMista = 0;
-let somaCalabresa
+let somaCalabresa = 0;
 let vendaMussarela= 0.00;
 let vendaMista= 0.00;
 let vendaCalabresa= 0.00;
@@ -25,13 +25,13 @@ function venda(e){
         //MANDANDO AS INFORMAÇÕES PARA O HTML - MANIPULAÇÃO DO DOM
         document.getElementById('resultadoMussarela').innerHTML = somaMussarela;
         document.getElementById('vendaMussarela').innerHTML = vendaMussarela.toFixed(2);
-    } else if(document.getElementById('mista')){
+    } else if(document.getElementById('mista').checked){
         somaMista = somaMista+1;
         vendaMista = vendaMista + 25.00;
         //MANDANDO AS INFORMAÇÕES PARA O HTML - MANIPULAÇÃO DO DOM
         document.getElementById('resultadoMista').innerHTML = somaMista;
         document.getElementById('vendaMista').innerHTML = vendaMista.toFixed(2);
-    } else if(document.getElementById('calabresa')){
+    } else if(document.getElementById('calabresa').checked){
         somaCalabresa = somaCalabresa+1;
         vendaCalabresa = vendaCalabresa + 25.00;
         //MANDANDO AS INFORMAÇÕES PARA O HTML - MANIPULAÇÃO DO DOM
@@ -51,7 +51,7 @@ function estorno(e){
         //MANDANDO AS INFORMAÇÕES PARA O HTML - MANIPULAÇÃO DO DOM
         document.getElementById('resultadoMussarela').innerHTML = somaMussarela;
         document.getElementById('vendaMussarela').innerHTML = vendaMussarela.toFixed(2);
-    } else if(document.getElementById('mista')){
+    } else if(document.getElementById('mista').checked){
         somaMista = somaMista-1;
         vendaMista = vendaMista - 25.00;
         if(somaMista<0){
@@ -61,7 +61,7 @@ function estorno(e){
         //MANDANDO AS INFORMAÇÕES PARA O HTML - MANIPULAÇÃO DO DOM
         document.getElementById('resultadoMista').innerHTML = somaMista;
         document.getElementById('vendaMista').innerHTML = vendaMista.toFixed(2);
-    } else if(document.getElementById('calabresa')){
+    } else if(document.getElementById('calabresa').checked){
         somaCalabresa = somaCalabresa-1;
         vendaCalabresa = vendaCalabresa - 25.00;
         if(somaCalabresa<0){
