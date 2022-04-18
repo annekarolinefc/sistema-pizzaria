@@ -66,7 +66,7 @@ function estorno(e){
         vendaCalabresa = vendaCalabresa - 25.00;
         if(somaCalabresa<0){
             somaCalabresa=0;
-            vendaCalabresa=0
+            vendaCalabresa=0.00;
         }
         //MANDANDO AS INFORMAÇÕES PARA O HTML - MANIPULAÇÃO DO DOM
         document.getElementById('resultadoCalabresa').innerHTML = somaCalabresa;
@@ -74,7 +74,7 @@ function estorno(e){
     }
 }
 
-function planilha(e){
-    TableToExcel.convert(documet.getElementById('table'));
-    //TableToExcel.convert(document.getElementById("table1"));
-}
+    function planilha(e){
+        //TableToExcel.convert(documet.getElementById('table'));
+        TableToExcel.convert(document.getElementById("table"));
+    }
